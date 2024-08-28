@@ -40,14 +40,14 @@ public class GeheimspracheEncoder {
 
         for(int i =0; i< kapitalCharacters.length; i++) {
             char newletter = (char) (kapitalCharacters[i] + 23);
-            if (kapitalCharacters[i] > 90){
+            if (kapitalCharacters[i] > 90){  // oder if(kapitalCharacters[i] > 'Z)
                  newletter = (char) (newletter - 26);
             }
             encoded[i] =  newletter;
 
         }
 
-        result = Arrays.toString(encoded);
+        result = new String(encoded);
 
         return result;
     }
